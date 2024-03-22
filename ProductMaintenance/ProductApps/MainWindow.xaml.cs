@@ -35,9 +35,11 @@ namespace ProductApps
                 cProduct.calTotalPayment(); 
                 cProduct.calTotalCharge();    // added
                 cProduct.calTotalChargeWrapped();    // added
+                cProduct.calTotalFee();    // added
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 totalChargeTextBlock.Text = Convert.ToString(cProduct.TotalCharge);   // added
                 totalCharge2TextBlock.Text = Convert.ToString(cProduct.TotalChargeWrapped);   // added
+                totalCharge3TextBlock.Text = Convert.ToString(cProduct.TotalFee);   // added
             }
             catch (FormatException)
             {
@@ -52,7 +54,8 @@ namespace ProductApps
             quantityTextBox.Text = "";
             totalPaymentTextBlock.Text = "";
             totalChargeTextBlock.Text = "";     //
-            totalCharge2TextBlock.Text = "";     //
+            totalCharge2TextBlock.Text = "";
+            totalCharge3TextBlock.Text = "";     //
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
